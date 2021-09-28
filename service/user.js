@@ -23,4 +23,14 @@ user.getOrders =(next)=>{
     })
 }
 
+user.getCompletedOrders =(next)=>{
+    return userDB.getCompletedOrders().then(res=>{
+        if (res){
+            return res;
+        }
+    }).catch(err=>{
+        throw err;
+    })
+}
+
 module.exports = user;

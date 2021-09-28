@@ -21,10 +21,27 @@ dbmodule.orderFood= (details)=>{
     })
 }
 
-dbmodule.getOrders= (details)=>{
+dbmodule.getOrders= ()=>{
     return dbConnection().then((db)=>{
         if(db){
-            return db.collection("OrderedFood").find().project({_id:0}).toArray().then(result=>{
+            return db.collection("OrderedFood").find({status:"order placed"}).project({_id:0}).toArray().then(result=>{
+                if (result.length>0){
+                    return result;
+                }
+                else{
+                    let err = new Error("No Orders Found!");
+                    err.status=400;
+                    throw err;
+                }
+            })
+        }
+    })
+}
+
+dbmodule.getCompletedOrders= ()=>{
+    return dbConnection().then((db)=>{
+        if(db){
+            return db.collection("OrderedFood").find({status:"completed"}).project({_id:0}).toArray().then(result=>{
                 if (result.length>0){
                     return result;
                 }

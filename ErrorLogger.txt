@@ -10,3 +10,9 @@ Error: Please register yourself to avail the services
 TypeError: db.collection(...).find(...).then is not a function
     at C:\Users\Aman Giri\Desktop\ibm\nodeWithPromise\Model\dbModule.js:27:56
     at processTicksAndRejections (internal/process/task_queues.js:93:5)
+Error: No Orders Found!
+    at C:\Users\Aman Giri\Desktop\ibm\nodeWithPromise\Model\dbModule.js:32:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+Error: No Orders Found!
+    at C:\Users\Aman Giri\Desktop\ibm\nodeWithPromise\Model\dbModule.js:32:31
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)

@@ -39,6 +39,16 @@ router.get('/get-orders', (req,res,next)=>{
     })
 })
 
+router.get('/get-completed-orders', (req,res,next)=>{
+    user.getCompletedOrders().then(resp=>{
+        if(resp){
+            res.send(resp)
+        }
+    }).catch(err=>{
+        next(err)
+    })
+})
+
 
 router.all('/*',(req,res,next)=>{
     res.send({"message": "invalid request"})
