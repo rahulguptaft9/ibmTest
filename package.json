@@ -1,0 +1,31 @@
+{
+  "name": "nodeWithPromise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "mocha": "^6.2.2",
+    "mocha-json-report": "0.0.2",
+    "mocha-spec-json-output-reporter": "^1.1.7",
+    "mochawesome": "^3.1.1",
+    "mongodb": "^3.3.3",
+    "mongojs": "^3.0.0",
+    "morgan": "~1.9.1",
+    "request": "^2.88.0",
+    "sinon": "^7.5.0",
+    "supertest": "^4.0.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
